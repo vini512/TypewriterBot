@@ -32,7 +32,7 @@ Open the script file and fill in your credentials and preferences at the top:
 NAME = "your_username"       # Your typewriter.at username
 PASSWORT = "your_password"   # Your typewriter.at password
 EXIT_KEY = "strg"            # The panic key to stop the bot (use 'ctrl' if on non-DE layouts)
-MISTAKE_PERCENT = 0.02       # Target error rate (0.02 = 2% mistakes)
+MISTAKE_PERCENTAGE = 2       # Target error rate (2%)
 DELAY = uniform(0.15, 0.17)  # Keystroke delay range (in seconds)
 ```
 
