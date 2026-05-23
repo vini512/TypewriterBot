@@ -17,7 +17,7 @@ DRIVER = webdriver.Chrome()
 DRIVER.get("https://at4.typewriter.at/index.php?r=site/login")
 EXIT_KEY = "strg"
 DELAY = uniform(0.15, 0.17)
-MISTAKE_PERCENT = 0.02
+MISTAKE_PERCENTAGE = 2
 TOTAL_MISTAKE_AMOUNT = None
 TOTAL_LETTER_AMOUNT = None
 
@@ -74,7 +74,7 @@ def getMistakes():
     typeLetter(letter)
     TOTAL_LETTER_AMOUNT = int(getItemIfExists(
         By.CSS_SELECTOR, "#amountRemaining").text) + 1
-    TOTAL_MISTAKE_AMOUNT = TOTAL_LETTER_AMOUNT * MISTAKE_PERCENT
+    TOTAL_MISTAKE_AMOUNT = TOTAL_LETTER_AMOUNT * (MISTAKE_PERCENTAGE / 100)
 
 
 def typeLetter(letter):
