@@ -11,13 +11,13 @@ from selenium.common.exceptions import TimeoutException
 from math import ceil
 
 
-NAME = ""  # your typewriter-name
-PASSWORT = ""  # your typewriter-name
+NAME = "" # Your typewriter.at username
+PASSWORT = ""  # Your typewriter.at password
 DRIVER = webdriver.Chrome()
 DRIVER.get("https://at4.typewriter.at/index.php?r=site/login")
-EXIT_KEY = "strg"
-DELAY = uniform(0.15, 0.17)
-MISTAKE_PERCENTAGE = 2
+EXIT_KEY = "f8" # The panic key to stop the bot 
+DELAY = uniform(0.15, 0.17) # Keystroke delay range (in seconds)
+MISTAKE_PERCENTAGE = 2 # Target error rate (2%)
 TOTAL_MISTAKE_AMOUNT = None
 TOTAL_LETTER_AMOUNT = None
 
